@@ -29,15 +29,52 @@
 
 import "./App.css";
 import ProfileCard from "./components/ProfileCard";
+import ProductItem from "./components/ProductItem";
+import ProductList from "./components/ProductList";
 
 function App() {
+  const products = [
+    {
+      id: 1,
+      name: "Shirt",
+      price: 299,
+      category: "Clothing",
+      onSale: true,
+      inStock: true,
+    },
+    {
+      id: 2,
+      name: "Pants",
+      price: 450,
+      category: "Clothing",
+      onSale: true,
+      inStock: false,
+    },
+    {
+      id: 3,
+      name: "Keyboard",
+      price: 1299,
+      category: "Electronics",
+      onSale: false,
+      inStock: true,
+    },
+    {
+      id: 4,
+      name: "Mousepad",
+      price: 129,
+      category: "Misc",
+      onSale: false,
+      inStock: true,
+    },
+  ];
+
   function showName(name) {
     alert(name);
   }
 
   return (
     <main>
-      <section class="card-container">
+      <section className="card-container">
         <ProfileCard
           name="Isabelle"
           title="Student"
@@ -65,6 +102,9 @@ function App() {
           img="https://www.gamereactor.se/media/99/_3999933.jpg"
           alertName={showName}
         />
+      </section>
+      <section className="list-container">
+        <ProductList products={products} />
       </section>
     </main>
   );

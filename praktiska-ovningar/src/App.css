@@ -30,3 +30,19 @@ main {
   object-fit: cover;
   border-radius: 8px;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  margin-top: 4rem;
+}
+
+.list-container ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1rem;
+}
